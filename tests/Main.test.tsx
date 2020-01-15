@@ -3,7 +3,7 @@ import * as ReactDOM from 'react-dom';
 import * as TestUtils from 'react-dom/test-utils';
 import Main from '../src/components/Main';
 
-it('App is rendered', () => {
+it('Main is rendered', () => {
     // Render App in the document
     const mainElement: any = TestUtils.renderIntoDocument(
         <Main />
@@ -12,5 +12,5 @@ it('App is rendered', () => {
     const mainNode = ReactDOM.findDOMNode(mainElement);
 
     // Verify text content
-    expect(mainNode.textContent).toEqual('Hello World! Foo to the barz');
+    expect(mainNode.textContent).toEqual('Hello World!');
 });
