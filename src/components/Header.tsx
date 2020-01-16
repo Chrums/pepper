@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react';
 import { Theme, WithStyles, createStyles, withStyles  } from '@material-ui/core/styles';
 
 import { AppBar, Toolbar, IconButton, Typography, Button } from '@material-ui/core';
@@ -6,15 +6,16 @@ import { Menu as MenuIcon } from '@material-ui/icons';
 
 import "./../assets/scss/header.scss";
 
-const styles = (theme) => createStyles({
+const styles = (theme: Theme) => createStyles({
     root: {
-        flexGrow: 1
+        padding: 8
     },
     menuButton: {
-        marginRight: theme.spacing(2)
+        flex: "0 0 auto",
+        marginRight: 8
     },
     title: {
-        flexGrow: 1
+        flex: "1 1 auto"
     },
 });
 
@@ -37,9 +38,9 @@ class Header extends React.Component<Props, State> {
             classes
         } = this.props;
         
-        return <AppBar position="static">
+        return <AppBar position="static" className={classes.root}>
             <Toolbar>
-                <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+                <IconButton className={classes.menuButton} color="inherit">
                     <MenuIcon />
                 </IconButton>
                 <Typography variant="h6" className={classes.title}>

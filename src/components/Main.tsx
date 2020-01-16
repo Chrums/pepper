@@ -1,11 +1,12 @@
-import * as React from "react";
-import { hot } from "react-hot-loader";
+import * as React from 'react';
+import { hot } from 'react-hot-loader';
 
 import "./../assets/scss/main.scss";
 
 import { Container } from '@material-ui/core';
 
 import Header from './Header';
+import Router from './Router';
 
 class Main extends React.Component<{}, undefined> {
     
@@ -13,7 +14,7 @@ class Main extends React.Component<{}, undefined> {
         return <React.Fragment>
             <Header />
             <Container>
-                
+                <Router />
             </Container>
         </React.Fragment>;
     }
