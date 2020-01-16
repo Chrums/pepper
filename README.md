@@ -14,7 +14,7 @@
 
 **Production**
 
-`yarn run start-prod`
+`npm run start-prod`
 
 * Build app once (HMR disabled) to `/dist/`
 * App served @ `http://localhost:8080`

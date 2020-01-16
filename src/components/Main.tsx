@@ -1,18 +1,21 @@
 import * as React from "react";
 import { hot } from "react-hot-loader";
 
-const logo = require("./../assets/img/react_logo.svg");
 import "./../assets/scss/main.scss";
+
+import { Container } from '@material-ui/core';
+
+import Header from './Header';
 
 class Main extends React.Component<{}, undefined> {
     
     public render(): JSX.Element {
-        return (
-            <div className="main">
-                <h1>Hello World!</h1>
-                <img src={logo.default} height="480"/>
-            </div>
-        );
+        return <React.Fragment>
+            <Header />
+            <Container>
+                
+            </Container>
+        </React.Fragment>;
     }
     
 }
